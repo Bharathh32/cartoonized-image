@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image to Cartoonize</h1>
+        <form action="/cartoonize" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="custom-file-upload">
+                Choose Image
+            </label>
+            <input id="file-upload" type="file" name="file" accept="image/*" required>
+            <button type="submit" class="generate-button">Cartoonize</button>
+        </form>
+    </div>
+</body>
+</html>
